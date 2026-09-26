@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Abed Codelab: interactive SQL from beginner to advanced.">
+  <title>Abed Codelab — SQL Beginner to Advanced</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="menu-button" id="menuButton">☰</button>
+  <div class="brand"><div class="brand-mark">A</div><div><strong>Abed Codelab</strong><span>SQL — Beginner to Advanced</span></div></div>
+  <div class="topbar-actions">
+    <a class="ghost-link" href="../README.md">README</a>
+    <a class="ghost-link" href="https://www.youtube.com/watch?v=OT1RErkfLNQ" target="_blank" rel="noreferrer">Video</a>
+    <button id="themeButton" class="icon-button">◐</button>
+  </div>
+</header>
+<div class="progress-shell"><div id="progressBar" class="progress-bar"></div></div>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head"><p class="eyebrow">18 STEPS</p><h2>SQL Course</h2><p id="progressText"></p></div>
+    <nav id="stepNav" class="step-nav"></nav>
+    <div class="sidebar-footer"><button id="resetProgress" class="text-button">Reset progress</button></div>
+  </aside>
+  <main class="main">
+    <article class="lesson-card">
+      <div class="lesson-meta"><span id="stepNumber" class="step-pill"></span><span id="modePill" class="mode-pill"></span></div>
+      <h1 id="lessonTitle"></h1>
+      <p id="lessonIntro" class="lead"></p>
+      <section><h2>Learn</h2><ul id="learnBullets" class="learn-list"></ul></section>
+      <section>
+        <div class="section-head"><h2>Example</h2><button class="copy-button" data-copy="exampleCode">Copy</button></div>
+        <pre><code id="exampleCode"></code></pre>
+      </section>
+      <section class="try-section">
+        <p class="eyebrow">YOUR TURN</p><h2>Try it</h2>
+        <p id="challengeText"></p>
+        <div class="runtime-status"><span id="runtimeDot" class="runtime-dot loading"></span><span id="runtimeText">Loading SQL runtime…</span></div>
+        <textarea id="starterCode" spellcheck="false"></textarea>
+        <div class="try-actions">
+          <button id="runSql" class="primary-button" disabled>▶ Run SQL</button>
+          <button id="checkAnswer" class="check-button" disabled>✓ Check answer</button>
+          <button id="resetCode" class="secondary-button">Reset</button>
+          <button id="solutionButton" class="secondary-button">Show solution</button>
+        </div>
+        <div id="resultPanel" class="run-panel">
+          <div class="run-panel-head"><span class="terminal-label">SQL RESULT</span><button id="clearOutput" class="text-button">Clear</button></div>
+          <div id="queryOutput" class="query-output">Runtime is loading…</div>
+          <div id="checkFeedback" class="check-feedback" hidden></div>
+        </div>
+        <div id="solutionPanel" class="solution-panel" hidden>
+          <div class="section-head"><strong>One possible solution</strong><button class="copy-button" data-copy="solutionCode">Copy</button></div>
+          <pre><code id="solutionCode"></code></pre>
+        </div>
+      </section>
+      <section class="takeaway"><p class="eyebrow">KEY TAKEAWAY</p><p id="takeawayText"></p></section>
+      <div class="lesson-footer">
+        <button id="prevButton" class="secondary-button">← Previous</button>
+        <button id="completeButton" class="complete-button">Mark step complete</button>
+        <button id="nextButton" class="primary-button">Next →</button>
+      </div>
+    </article>
+  </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sql.js@1.13.0/dist/sql-wasm.js"></script>
+<script src="./steps.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
